@@ -1,7 +1,7 @@
 <template>
     <div class="banner">
         <div class="banner-main">
-            <h2>Make all your cold email wishes come true with EmailGenie</h2>
+            <h2 class="animate__animated animate__pulse">Make all your cold email wishes come true with EmailGenie</h2>
             <span class="describe">Simply input your desired intent and any relevant information, and EmailGenie does the rest.</span>
             <button>Start Writing For Free</button>
             <span class="hint">No credit card required</span>
