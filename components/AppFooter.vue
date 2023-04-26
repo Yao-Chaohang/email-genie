@@ -177,12 +177,17 @@
             li {
                 margin: 14px;
                 font-size: 14px;
+                cursor: pointer;
+                &:hover {
+                    color: $nav-hover-color;
+                }
             }
         }
         .headline {
-            color: #ffffff;
+            color: #ffffff !important;
             font-size: 16px;
             margin-bottom: 28px;
+            cursor: auto;
         }
     }
 }

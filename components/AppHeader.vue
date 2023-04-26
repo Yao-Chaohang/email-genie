@@ -60,6 +60,10 @@
                     margin-right: 20px;
                     color: #fff;
                     float: left;
+                    cursor: pointer;
+                    &:hover {
+                        color: $nav-hover-color;
+                    }
                 }
             }
         }
@@ -74,14 +78,24 @@
                 color: #fff;
                 float: left;
                 margin-left: 20px;
+                cursor: pointer;
+                &:hover {
+                    color: $nav-hover-color;
+                }
                 button {
                     width: 240px;
                     height: 50px;
                     color: #fff;
-                    background-color: #139EBC;
+                    background-color: $btn-bg-color;
                     border: none;
                     border-radius: 8px;
                     font-size: 18px;
+                    &:hover {
+                        background-color: $btn-hover-color;
+                    }
+                    &:active {
+                        background-color: $btn-bg-color;
+                    }
                 }
             }
         }

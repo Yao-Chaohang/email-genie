@@ -39,10 +39,16 @@
             width: 260px;
             height: 60px;
             border: none;
-            background-color: #139EBC;
+            background-color: $btn-bg-color;
             margin: 0 auto 38px auto;
             color: #fff;
             border-radius: 8px;
+            &:hover {
+                background-color: $btn-hover-color;
+            }
+            &:active {
+                background-color: $btn-bg-color;
+            }
         }
     }
 }
