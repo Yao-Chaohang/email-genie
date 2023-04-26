@@ -1,10 +1,6 @@
 <template>
     <div class="app-footer">
-        <div class="logo">
-            <h1>EmailGenie</h1>
-            <div class="bg"></div>
-        </div>
-
+        <Logo />
         <div class="footer-nav">
             <ul v-for="(list, listIdx) in footerNavList" :key="listIdx">
                 <li v-for="(nav, navIdx) in list" :key="navIdx" :class="{headline: nav.type === 'headline'}">{{ nav.label }}</li>
@@ -150,24 +146,7 @@
 .app-footer {
     padding: 80px 120px;
     background-color: #2C2C2C;
-    .logo {
-        margin-right: 28px;
-        position: relative;
-        top: 10px;
-        h1 {
-            position: absolute;
-            top: -26px;
-            left: -28px;
-            font-size: 32px;
-            margin: 0;
-            color: #fff;
-        }
-        .bg {
-            width: 180px;
-            height: 20px;
-            background-image: linear-gradient(to right, #139EBC , #A013BC);
-        }
-    }
+    overflow: hidden;
     .footer-nav {
         margin-top: 50px;
         display: grid;
@@ -188,6 +167,18 @@
             font-size: 16px;
             margin-bottom: 28px;
             cursor: auto;
+        }
+    }
+}
+</style>
+
+<!-- 移动端样式 -->
+<style lang="scss" scoped>
+@media all and (max-width: 750px) {
+    .app-footer {
+        padding: 40px 20px;
+        .footer-nav {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

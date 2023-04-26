@@ -10,10 +10,12 @@
   },
   "devDependencies": {
     "@types/node": "^18",
+    "@vant/nuxt": "^1.0.1",
     "nuxt": "^3.4.2"
   },
   "dependencies": {
     "sass": "^1.62.0",
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "vant": "^4.2.0"
   }
 }

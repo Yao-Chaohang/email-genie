@@ -27,7 +27,6 @@
 
 <style lang="scss" scoped>
 .home {
-    min-width: 1100px;
     .subject-title {
         font-size: 48px;
         text-align: center;

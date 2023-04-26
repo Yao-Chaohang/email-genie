@@ -1,0 +1,16 @@
+{
+  "id": "4040075",
+  "name": "email-genie",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "34817868",
+      "name": "折叠菜单",
+      "font_class": "zhediecaidan",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    }
+  ]
+}

@@ -1,16 +1,17 @@
 <template>
     <div class="app-header">
         <section class="header-left">
-            <div class="logo">
-                <h1>EmailGenie</h1>
-                <div class="bg"></div>
-            </div>
+            <Logo />
             <div class="menu">
                 <ul>
                     <li>About</li>
                     <li>Resources</li>
                     <li>Pricing</li>
                 </ul>
+            </div>
+
+            <div class="menu-iphone" @click="setShowVanPopUp(true)">
+                <i class="iconfont icon-zhediecaidan"></i>
             </div>
         </section>
         <section class="header-right">
@@ -19,8 +20,34 @@
                 <li><button>Get Started —— It's Free</button></li>
             </ul>
         </section>
+
+        <van-popup v-model:show="isShowVanPopUp" round position="left" :overlay="false" :style="vanPopUpStyle">
+            <div class="van-popup-main">
+                <div class="close" @click="setShowVanPopUp(false)">
+                    <van-icon name="cross" size="32px" color="#c1c1c1" />
+                </div>
+                <ul>
+                    <li>About</li>
+                    <li>Resources</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+        </van-popup>
     </div>
 </template>
+
+<script setup>
+    const isShowVanPopUp = ref(false)
+
+    const vanPopUpStyle = {
+        width: '70%',
+        height: '100%'
+    }
+
+    function setShowVanPopUp(status) {
+        isShowVanPopUp.value = status
+    }
+</script>
 
 <style lang="scss" scoped>
 .app-header {
@@ -29,28 +56,13 @@
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    overflow: hidden;
     background-color: $header-bg-color;
+    box-sizing: border-box;
     .header-left {
         display: flex;
-        .logo {
-            margin-right: 28px;
-            position: relative;
-            top: 10px;
-            h1 {
-                position: absolute;
-                top: -26px;
-                left: -28px;
-                font-size: 32px;
-                margin: 0;
-                color: #fff;
-            }
-            .bg {
-                width: 180px;
-                height: 20px;
-                background-image: linear-gradient(to right, #139EBC , #A013BC);
-            }
-        }
         .menu{
+            margin-left: 20px;
             height: 100%;
             ul {
                 li {
@@ -65,6 +77,16 @@
                         color: $nav-hover-color;
                     }
                 }
+            }
+        }
+        .menu-iphone {
+            margin-top: -14px;
+            margin-left: 6px;
+            display: none;
+            i {
+                font-size: 42px;
+                color: #fff;
+                cursor: pointer;
             }
         }
     }
@@ -97,6 +119,61 @@
                         background-color: $btn-bg-color;
                     }
                 }
+            }
+        }
+    }
+    .van-popup-main {
+        padding: 40px 20px;
+        height: 91%;
+        background-color: $header-bg-color;
+        position: relative;
+        .close {
+            position: absolute;
+            top: 14px;
+            right: 8px;
+        }
+        ul {
+            margin-top: 20px;
+            li {
+                margin: 30px 0;
+                font-size: 22px;
+                color: #c1c1c1;
+                &:hover {
+                    color: $nav-hover-color;
+                }
+            }
+        }
+    }
+}
+</style>
+
+<!-- 移动端样式 -->
+<style lang="scss" scoped>
+@media all and (max-width: 1000px) {
+    .app-header {
+        .header-right {
+            ul {
+                li {
+                    button {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media all and (max-width: 750px) {
+    .app-header {
+        width: 100vw;
+        height: 70px;
+        padding: 40px 0 10px 40px;
+        .header-left {
+            .menu {
+                display: none;
+            }
+            .menu-iphone {
+                display: block;
             }
         }
     }

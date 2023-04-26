@@ -42,9 +42,8 @@ const retScroll = (data) => {
 
 <style lang="scss" scoped>
 .show-card {
-    width: 80%;
     margin: 0 auto 90px auto;
-
+    box-sizing: border-box;
     .show-card-main {
         display: flex;
         justify-content: center;
@@ -71,6 +70,28 @@ const retScroll = (data) => {
         width: 80%;
         display: block;
         margin: 30px auto;
+    }
+}
+</style>
+
+<!-- 移动端样式 -->
+<style lang="scss" scoped>
+@media all and (max-width: 750px) {
+    .show-card {
+        padding: 0 20px;
+        margin: 0 auto 20px auto;
+        .show-card-main {
+            margin-bottom: 20px;
+            .serial-number {
+                width: 43px;
+                height: 25px;
+                line-height: 25px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
     }
 }
 </style>
