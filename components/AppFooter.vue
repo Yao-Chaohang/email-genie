@@ -176,7 +176,7 @@
 <style lang="scss" scoped>
 @media all and (max-width: 750px) {
     .app-footer {
-        padding: 40px 20px;
+        padding: 40px 40px;
         .footer-nav {
             grid-template-columns: 1fr 1fr;
         }

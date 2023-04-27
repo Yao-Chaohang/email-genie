@@ -4,7 +4,7 @@
             <Logo />
             <div class="menu">
                 <ul>
-                    <li>About</li>
+                    <li @click="switchoverPage('/about')">About</li>
                     <li>Resources</li>
                     <li>Pricing</li>
                 </ul>
@@ -38,6 +38,7 @@
 
 <script setup>
     const isShowVanPopUp = ref(false)
+    const router = useRouter()
 
     const vanPopUpStyle = {
         width: '70%',
@@ -46,6 +47,10 @@
 
     function setShowVanPopUp(status) {
         isShowVanPopUp.value = status
+    }
+
+    function switchoverPage(path) {
+        router.push(path)
     }
 </script>
 
