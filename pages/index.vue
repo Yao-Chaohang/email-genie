@@ -9,6 +9,13 @@
 </template>
 
 <script setup>
+    useHead({
+      title: 'email-genie',
+      meta: [
+        { name: 'email-genie', content: 'my email-genie project' }
+      ]
+    })
+
     const showCardList = [
         {
             title: 'Simply Search or select the type of email you want to write',
