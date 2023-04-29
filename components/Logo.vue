@@ -1,15 +1,20 @@
 <template>
-    <div class="logo">
+    <div class="logo" @click="() => router.push('/')">
         <h1>EmailGenie</h1>
         <div class="bg"></div>
     </div>
 </template>
+
+<script setup>
+    const router = useRouter()
+</script>
 
 <style lang="scss" scoped>
 .logo {
     // margin: 0 28px;
     position: relative;
     top: 10px;
+    cursor: pointer;
 
     h1 {
         position: absolute;

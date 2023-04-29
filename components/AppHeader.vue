@@ -4,9 +4,7 @@
             <Logo />
             <div class="menu">
                 <ul>
-                    <li @click="switchoverPage('/about')">About</li>
-                    <li>Resources</li>
-                    <li>Pricing</li>
+                    <li @click="switchoverPage('/about')">关于我们</li>
                 </ul>
             </div>
 
@@ -27,9 +25,7 @@
                     <van-icon name="cross" size="32px" color="#c1c1c1" />
                 </div>
                 <ul>
-                    <li>About</li>
-                    <li>Resources</li>
-                    <li>Pricing</li>
+                    <li @click="switchoverPage('/about')">关于我们</li>
                 </ul>
             </div>
         </van-popup>
