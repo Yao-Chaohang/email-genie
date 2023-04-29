@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     css: [
         '@/assets/styles/reset.css',
         '@/assets/styles/animate.css',
-        '@/assets/icon-font/iconfont.css'
+        '@/assets/icon-font/iconfont.css',
+        "bootstrap/dist/css/bootstrap.min.css"
     ],
     modules: [
         '@vant/nuxt'

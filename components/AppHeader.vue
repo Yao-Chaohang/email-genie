@@ -47,6 +47,7 @@
 
     function switchoverPage(path) {
         router.push(path)
+        setShowVanPopUp(false)
     }
 </script>
 
