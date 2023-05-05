@@ -2,11 +2,11 @@
     <div class="app-header">
         <section class="header-left">
             <Logo />
-            <div class="menu">
+            <!-- <div class="menu">
                 <ul>
                     <li @click="switchoverPage('/about')">关于我们</li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="menu-iphone" @click="setShowVanPopUp(true)">
                 <i class="iconfont icon-zhediecaidan"></i>
@@ -14,8 +14,9 @@
         </section>
         <section class="header-right">
             <ul>
-                <li>Log In</li>
-                <li><button>Get Started —— It's Free</button></li>
+                <!-- <li>Log In</li>
+                <li><button>Get Started —— It's Free</button></li> -->
+                <li @click="switchoverPage('/about')">关于我们</li>
             </ul>
         </section>
 
